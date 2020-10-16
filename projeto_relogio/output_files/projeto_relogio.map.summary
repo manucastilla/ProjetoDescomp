@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Failed - Sun Oct 11 16:17:37 2020
+Analysis & Elaboration Status : Failed - Thu Oct 15 22:58:59 2020
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : projeto_relogio
-Top-level Entity Name : processador
+Top-level Entity Name : projeto_relogio
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

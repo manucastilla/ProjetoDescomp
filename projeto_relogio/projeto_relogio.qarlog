@@ -1,0 +1,28 @@
+Quartus Prime Archive log --	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qarlog
+
+Archive:	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
+Date:		Thu Oct 15 16:26:52 2020
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/ULA.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/UnidadeControle.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/bancoRegistradoresArqRegMem.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/flipflopGenerico.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/memoriaROM.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/muxGenerico2x1.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.done
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.flow.rpt
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.map.rpt
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.map.summary
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qpf
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qsf
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd
+C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/somaConstante.vhd
+c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 17 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

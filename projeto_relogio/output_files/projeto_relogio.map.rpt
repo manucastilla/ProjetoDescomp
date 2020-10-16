@@ -1,5 +1,5 @@
-Analysis & Synthesis report for projeto_relogio
-Sun Oct 11 16:17:37 2020
+Analysis & Elaboration report for projeto_relogio
+Thu Oct 15 22:58:59 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -33,32 +33,50 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Oct 11 16:17:37 2020           ;
-; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
-; Revision Name               ; projeto_relogio                             ;
-; Top-level Entity Name       ; processador                                 ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Failed - Thu Oct 15 22:58:59 2020           ;
+; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                 ; projeto_relogio                             ;
+; Top-level Entity Name         ; projeto_relogio                             ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; processador        ; projeto_relogio    ;
+; Top-level entity name                                                           ; projeto_relogio    ; projeto_relogio    ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
@@ -68,7 +86,6 @@ refer to the applicable agreement for further details.
 ; Preserve fewer node names                                                       ; On                 ; On                 ;
 ; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
 ; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
 ; State Machine Processing                                                        ; Auto               ; Auto               ;
 ; Safe State Machine                                                              ; Off                ; Off                ;
 ; Extract Verilog State Machines                                                  ; On                 ; On                 ;
@@ -138,64 +155,58 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 11 16:17:11 2020
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_relogio -c projeto_relogio
+    Info: Processing started: Thu Oct 15 22:58:45 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_relogio -c projeto_relogio --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/registradorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: registradorGenerico File: C:/intelFPGA_lite/17.1/projeto_relogio/registradorGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/intelFPGA_lite/17.1/projeto_relogio/memoriaROM.vhd Line: 17
-    Info (12023): Found entity 1: memoriaROM File: C:/intelFPGA_lite/17.1/projeto_relogio/memoriaROM.vhd Line: 5
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/memoriaROM.vhd Line: 16
+    Info (12023): Found entity 1: memoriaROM File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/memoriaROM.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/intelFPGA_lite/17.1/projeto_relogio/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/somaConstante.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/muxGenerico2x1.vhd Line: 14
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/intelFPGA_lite/17.1/projeto_relogio/muxGenerico2x1.vhd Line: 4
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/muxGenerico2x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregmem.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/bancoRegistradoresArqRegMem.vhd Line: 23
-    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/intelFPGA_lite/17.1/projeto_relogio/bancoRegistradoresArqRegMem.vhd Line: 5
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegMem-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/bancoRegistradoresArqRegMem.vhd Line: 23
+    Info (12023): Found entity 1: bancoRegistradoresArqRegMem File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/bancoRegistradoresArqRegMem.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-arch_name File: C:/intelFPGA_lite/17.1/projeto_relogio/processador.vhd Line: 23
-    Info (12023): Found entity 1: processador File: C:/intelFPGA_lite/17.1/projeto_relogio/processador.vhd Line: 5
+    Info (12022): Found design unit 1: processador-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 23
+    Info (12023): Found entity 1: processador File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/ULA.vhd Line: 19
-    Info (12023): Found entity 1: ULA File: C:/intelFPGA_lite/17.1/projeto_relogio/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: ULA-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/ULA.vhd Line: 19
+    Info (12023): Found entity 1: ULA File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file flipflopgenerico.vhd
-    Info (12022): Found design unit 1: flipflopGenerico-comportamento File: C:/intelFPGA_lite/17.1/projeto_relogio/flipflopGenerico.vhd Line: 13
-    Info (12023): Found entity 1: flipflopGenerico File: C:/intelFPGA_lite/17.1/projeto_relogio/flipflopGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: flipflopGenerico-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/flipflopGenerico.vhd Line: 13
+    Info (12023): Found entity 1: flipflopGenerico File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/flipflopGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file unidadecontrole.vhd
-    Info (12022): Found design unit 1: UnidadeControle-arch_name File: C:/intelFPGA_lite/17.1/projeto_relogio/UnidadeControle.vhd Line: 19
-    Info (12023): Found entity 1: UnidadeControle File: C:/intelFPGA_lite/17.1/projeto_relogio/UnidadeControle.vhd Line: 5
-Error (10482): VHDL error at processador.vhd(70): object "sinallocal" is used but not declared File: C:/intelFPGA_lite/17.1/projeto_relogio/processador.vhd Line: 70
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4840 megabytes
-    Error: Processing ended: Sun Oct 11 16:17:37 2020
-    Error: Elapsed time: 00:00:26
-    Error: Total CPU time (on all processors): 00:00:58
+    Info (12022): Found design unit 1: UnidadeControle-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/UnidadeControle.vhd Line: 15
+    Info (12023): Found entity 1: UnidadeControle File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/UnidadeControle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file projeto_relogio.vhd
+    Info (12022): Found design unit 1: projeto_relogio-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 24
+    Info (12023): Found entity 1: projeto_relogio File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
+    Info (12022): Found design unit 1: decodificador-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 33
+    Info (12023): Found entity 1: decodificador File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
+    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd Line: 15
+    Info (12023): Found entity 1: interfaceCHAVES File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd Line: 4
+Error (10500): VHDL syntax error at conversorHex7Seg.vhd(59) near text "if";  expecting "process" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/conversorHex7Seg.vhd Line: 59
+Info (12021): Found 0 design units, including 0 entities, in source file conversorhex7seg.vhd
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4844 megabytes
+    Error: Processing ended: Thu Oct 15 22:58:59 2020
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:31
 
 
