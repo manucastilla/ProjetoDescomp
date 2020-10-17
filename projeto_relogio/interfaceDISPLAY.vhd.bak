@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity interfaceDISPLAY is
+	generic(
+		 dataWidth: natural := 4
+	);
+	
+	
+	port(
+		
+	
+	);
+	
+end entity;
+
+architecture arch_name of interfaceDISPLAY is
+
+begin
+
+
+
+end architecture;

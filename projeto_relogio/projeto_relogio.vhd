@@ -23,16 +23,25 @@ end entity;
 
 architecture arch_name of projeto_relogio is
 
-  signal habilitaChave 		 : std_logic;
-  signal habilitaBtempo_Esc : std_logic;
-  signal habilitaBtempo_Let : std_logic;
-  signal habilita           : std_logic;
-  signal habilitaBotao		 : std_logic_vector(3 DOWNTO 0);
-  signal dadoHex				 : std_logic_vector(3 DOWNTO 0);
-  signal habilitaDisp		 : std_logic_vector(5 DOWNTO 0);
+  signal habilitaChave 		   : std_logic;
+  signal habilitaBtempo_Limpa : std_logic;
+  signal habilitaBtempo_Hab   : std_logic;
+  signal habilita             : std_logic;
+  signal habilitaBotao        : std_logic;
+  --signal habilitaBotao		 : std_logic_vector(3 DOWNTO 0);
+  signal dadoHex				   : std_logic_vector(3 DOWNTO 0);
+  
+  signal habilitaDisp_u_h  	:   std_logic;
+  signal habilitaDisp_d_h  	:   std_logic;
+  signal habilitaDisp_d_m  	:   std_logic;
+  signal habilitaDisp_u_m  	:   std_logic;
+  signal habilitaDisp_d_s  	:   std_logic;
+  signal habilitaDisp_u_s  	:   std_logic;
   
   signal processador_in 	 : std_logic_vector(7 DOWNTO 0);
-  signal processador_in_hex : std_logic_vector(7 DOWNTO 0);
+	signal processador_out_hex : std_logic_vector(7 DOWNTO 0);
+  signal signalDecode7Seg0 : std_logic_vector(3 DOWNTO 0);
+  
   signal processador_in_end : std_logic_vector(9 DOWNTO 0);
 
   signal load, store			 : std_logic;
@@ -43,12 +52,13 @@ begin
 	processador: entity work.processador
 			port map(
 			 -- Entradas (placa)
-				BarramentoDados => processador_in,
-				clk 				 => CLOCK_50,
-				barramentoEnd 	 => processador_in_end,
-				dadoHEX 			 => processador_in_hex,
-				loadSaida 		 => load,
-				storeSaida 		 => store
+				BarramentoDados      => processador_in,
+				clk 				      => CLOCK_50,
+				barramentoEnd 	      => processador_in_end,
+				--barramentoSaidaDados => x"0000" & processador_out_hex,
+				barramentoSaidaDados => processador_out_hex,
+				loadSaida 		      => load,
+				storeSaida 		      => store
 			 
 		  );
   
@@ -59,33 +69,130 @@ begin
 			   saida    => processador_in	
 			);
   
+ 
+  ---------------------- DISP 0 ----------------------
+  ---------------- unidade segundo -------------------
+   regDSP : entity work.registradorGenerico
+			generic map(larguraDados => 4)
+			port map(
+			   DIN    => processador_out_hex(3 DOWNTO 0),
+			   DOUT   => signalDecode7Seg0,
+			   ENABLE => habilitaDisp_u_s,
+				CLK    => CLOCK_50,
+				RST    => '0'
+			);
+			
+			
+   DSP0 : entity work.conversorHex7Seg
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX0
+			);
+			
+	---------------------- DISP 1 ----------------------
+	----------------- dezena segundo -------------------
+
    
---   interfaceDisp: entity work.conversorHex7Seg
---			port map(
---			    -- Input ports
---				  dadoHex => dadoHex,
---				  clk     => CLOCK_50,
---				  habilita=> habilita,
---        
---				  -- Output ports
---				  saida7seg : out std_logic_vector(6 downto 0)  -- := (others => '1')
---			);
-  
+			
+			
+   DSP1 : entity work.conversorHex7Seg
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX1
+			);
+			
+	---------------------- DISP 2 ----------------------
+   ------------------ unidade minuto ------------------
+	
+	
+			
+   DSP2 : entity work.conversorHex7Seg
+	
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX2
+			);
+			
+	
+	---------------------- DISP 3 ----------------------
+   ------------------ dezena minuto ------------------
+	
+	
+			
+			
+   DSP3 : entity work.conversorHex7Seg
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX3
+			);
+		
+	---------------------- DISP 4 ----------------------
+   ------------------ unidade hora ------------------
+	
+	
+			
+   DSP4 : entity work.conversorHex7Seg
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX4
+			);	
+			
+	---------------------- DISP 5 ----------------------
+   ------------------- dezena hora --------------------
+	
+	
+			
+			
+   DSP5 : entity work.conversorHex7Seg
+		  port map(
+			  dadoHex   => signalDecode7Seg0,
+			  apaga     => '0',
+			  negativo  => '0',
+			  overFlow  => '0',
+			  saida7seg => HEX5
+			);
+	
+	
+	
+	--------------------------------------------------
+	-------------------------------------------------- 
+	
 	decodificadorRelogio : entity work.decodificador
 			generic map (
 					larguraDados => 8
 											)
 			port map(
-				endereco  => processador_in_hex,
+				endereco  => processador_out_hex,
 				load		 => store,
 				store	  	 => load,
 					 
-					 -- Output ports
-				comandoBotao		 => habilitaBotao,
-				comandoChave		 => habilitaChave,
-				comandoDisp  		 => habilitaDisp,
-				comandoBTempo_Esc  => habilitaBtempo_Esc,
-				comandoBTempo_Let  => habilitaBtempo_Let
+				selecionaBotao		 => habilitaBotao,
+				selecionaChave		 => habilitaChave,
+			
+				selecionaDisp_u_h  => habilitaDisp_u_h,
+				selecionaDisp_d_h  => habilitaDisp_d_h,		
+				selecionaDisp_d_m  => habilitaDisp_d_m,			
+				selecionaDisp_u_m  => habilitaDisp_u_m,  			
+				selecionaDisp_d_s  => habilitaDisp_d_s,  			
+				selecionaDisp_u_s  => habilitaDisp_u_s, 
+				
+				selecionaBTempo_Hab    => habilitaBtempo_Hab,
+				selecionaBTempo_Limpa  => habilitaBtempo_Limpa
 			);
 			
   

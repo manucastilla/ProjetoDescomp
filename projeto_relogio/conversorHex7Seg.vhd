@@ -4,12 +4,11 @@ use ieee.std_logic_1164.all;
 entity conversorHex7Seg is
     port
     (
-
         -- Input ports
         dadoHex : in  std_logic_vector(3 downto 0);
-        clk     : in  std_logic;
-        habilita: in  std_logic;
-        
+        apaga   : in  std_logic := '0';
+        negativo : in  std_logic := '0';
+        overFlow : in  std_logic := '0';
         -- Output ports
         saida7seg : out std_logic_vector(6 downto 0)  -- := (others => '1')
     );
@@ -49,15 +48,8 @@ begin
                             "0001110" when dadoHex="1111" else ---F
                             "1111111"; -- Apaga todos segmentos.
 
-    process(RST, CLK)
-    begin
-            if (rising_edge(CLK)) then
-                if (habilita = '1') then
-                        saida7seg <= rascSaida7seg;
-                end if;
-            end if;
-        end if;
-    end process;
-	 
-	 
+    saida7seg <=     "1100010" when (overFlow='1') else
+                            "1111111" when (apaga='1' and negativo='0') else
+                            "0111111" when (apaga='0' and negativo='1') else
+                            rascSaida7seg;
 end architecture;

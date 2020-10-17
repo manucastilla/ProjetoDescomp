@@ -13,7 +13,7 @@ entity processador is
 		BarramentoDados: in std_logic_vector(dadosWidth-1 DOWNTO 0);
 		clk: in std_logic;
 		barramentoEnd: out std_logic_vector (enderecoWidth-1 DOWNTO 0);
-		dadoHEX: out std_logic_vector(dadosWidth-1 DOWNTO 0);
+		barramentoSaidaDados: out std_logic_vector(dadosWidth-1 DOWNTO 0);
 		loadSaida, storeSaida : out std_logic
     
   );
@@ -23,7 +23,7 @@ end entity;
 architecture arch_name of processador is
 
 	signal PC_ROM, Incr_MUX_ProxPC, Inc_PC   : std_logic_vector (enderecoWidth-1 DOWNTO 0);
-	signal flagZero, flagUC                  : std_logic;
+	signal flagZero, flagUC                          : std_logic;
 	signal selMuxProxPC_flag					  : std_logic;
 	signal operacao                          : std_logic_vector(2 DOWNTO 0); -- 4 bits para as operacoes
 	signal saidaFlipFlop							  : std_logic;
@@ -155,7 +155,7 @@ architecture arch_name of processador is
 					palavraControle => palavraControle
 			);
 	
-	dadoHEX <= UlaentradaA;
+	barramentoSaidaDados <= UlaentradaA;
 	loadSaida <= load;
 	storeSaida <= store;
 

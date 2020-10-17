@@ -1,5 +1,5 @@
 Analysis & Elaboration report for projeto_relogio
-Thu Oct 15 22:58:59 2020
+Fri Oct 16 19:41:39 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -9,8 +9,32 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |projeto_relogio
+  5. Parameter Settings for User Entity Instance: processador:processador
+  6. Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM
+  7. Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC
+  8. Parameter Settings for User Entity Instance: processador:processador|somaConstante:incremento1
+  9. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:MUX_PC
+ 10. Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegMem:bancoRegistrador
+ 11. Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULA
+ 12. Parameter Settings for User Entity Instance: processador:processador|ULA:ULA
+ 13. Parameter Settings for User Entity Instance: interfaceCHAVES:interfaceSW
+ 14. Parameter Settings for User Entity Instance: registradorGenerico:regDSP
+ 15. Parameter Settings for User Entity Instance: decodificador:decodificadorRelogio
+ 16. Analysis & Elaboration Settings
+ 17. Port Connectivity Checks: "decodificador:decodificadorRelogio"
+ 18. Port Connectivity Checks: "conversorHex7Seg:DSP5"
+ 19. Port Connectivity Checks: "conversorHex7Seg:DSP4"
+ 20. Port Connectivity Checks: "conversorHex7Seg:DSP3"
+ 21. Port Connectivity Checks: "conversorHex7Seg:DSP2"
+ 22. Port Connectivity Checks: "conversorHex7Seg:DSP1"
+ 23. Port Connectivity Checks: "conversorHex7Seg:DSP0"
+ 24. Port Connectivity Checks: "registradorGenerico:regDSP"
+ 25. Port Connectivity Checks: "processador:processador|UnidadeControle:unidadeControle"
+ 26. Port Connectivity Checks: "processador:processador|flipflopGenerico:flipFLop"
+ 27. Port Connectivity Checks: "processador:processador|registradorGenerico:PC"
+ 28. Port Connectivity Checks: "processador:processador"
+ 29. Analysis & Elaboration Messages
 
 
 
@@ -36,7 +60,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Oct 15 22:58:59 2020           ;
+; Analysis & Elaboration Status ; Successful - Fri Oct 16 19:41:39 2020       ;
 ; Quartus Prime Version         ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                 ; projeto_relogio                             ;
 ; Top-level Entity Name         ; projeto_relogio                             ;
@@ -65,6 +89,132 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |projeto_relogio ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
+; ADDR_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; enderecowidth  ; 10    ; Signed Integer                              ;
+; dadoswidth     ; 8     ; Signed Integer                              ;
+; dataromwidth   ; 19    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|memoriaROM:ROM ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; datawidth      ; 19    ; Signed Integer                                             ;
+; addrwidth      ; 10    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|registradorGenerico:PC ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; larguradados   ; 10    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|somaConstante:incremento1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 10    ; Signed Integer                                                        ;
+; constante      ; 1     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:MUX_PC ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 10    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|bancoRegistradoresArqRegMem:bancoRegistrador ;
++---------------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                                ;
++---------------------+-------+-------------------------------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                                      ;
+; larguraendbancoregs ; 5     ; Signed Integer                                                                      ;
++---------------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|muxGenerico2x1:muxULA ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:processador|ULA:ULA ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceCHAVES:interfaceSW ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:regDSP ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decodificador:decodificadorRelogio ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,13 +305,143 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decodificador:decodificadorRelogio"                                                                  ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; selecionabotao        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionadisp_u_h     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionadisp_d_h     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionadisp_d_m     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionadisp_u_m     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionadisp_d_s     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionabtempo_hab   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; selecionabtempo_limpa ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP5" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP4" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP3" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP2" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP1" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DSP0" ;
++----------+-------+----------+---------------------+
+; Port     ; Type  ; Severity ; Details             ;
++----------+-------+----------+---------------------+
+; apaga    ; Input ; Info     ; Stuck at GND        ;
+; negativo ; Input ; Info     ; Stuck at GND        ;
+; overflow ; Input ; Info     ; Stuck at GND        ;
++----------+-------+----------+---------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:regDSP" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                 ;
++------+-------+----------+------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador|UnidadeControle:unidadeControle"                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; palavracontrole[5..3] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; palavracontrole[9]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador|flipflopGenerico:flipFLop"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; rst  ; Input  ; Info     ; Stuck at GND                                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador|registradorGenerico:PC" ;
++--------+-------+----------+------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                        ;
++--------+-------+----------+------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                   ;
+; rst    ; Input ; Info     ; Stuck at GND                                   ;
++--------+-------+----------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:processador"                                                                     ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; barramentoend ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 15 22:58:45 2020
+    Info: Processing started: Fri Oct 16 19:41:23 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_relogio -c projeto_relogio --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -196,17 +476,60 @@ Info (12021): Found 2 design units, including 1 entities, in source file projeto
     Info (12022): Found design unit 1: projeto_relogio-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 24
     Info (12023): Found entity 1: projeto_relogio File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 33
+    Info (12022): Found design unit 1: decodificador-arch_name File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 41
     Info (12023): Found entity 1: decodificador File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
     Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd Line: 15
     Info (12023): Found entity 1: interfaceCHAVES File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd Line: 4
-Error (10500): VHDL syntax error at conversorHex7Seg.vhd(59) near text "if";  expecting "process" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/conversorHex7Seg.vhd Line: 59
-Info (12021): Found 0 design units, including 0 entities, in source file conversorhex7seg.vhd
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4844 megabytes
-    Error: Processing ended: Thu Oct 15 22:58:59 2020
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:31
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfacebotao.vhd
+    Info (12022): Found design unit 1: interfaceBotao-comportamento File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceBotao.vhd Line: 15
+    Info (12023): Found entity 1: interfaceBotao File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/interfaceBotao.vhd Line: 4
+Info (12127): Elaborating entity "projeto_relogio" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(27): object "habilitaBtempo_Limpa" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 27
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(28): object "habilitaBtempo_Hab" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 28
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(30): object "habilitaBotao" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(34): object "habilitaDisp_u_h" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(35): object "habilitaDisp_d_h" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(36): object "habilitaDisp_d_m" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(37): object "habilitaDisp_u_m" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(38): object "habilitaDisp_d_s" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 38
+Warning (10036): Verilog HDL or VHDL warning at projeto_relogio.vhd(45): object "processador_in_end" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 45
+Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 52
+Warning (10541): VHDL Signal Declaration warning at processador.vhd(15): used implicit default value for signal "barramentoEnd" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 15
+Warning (10036): Verilog HDL or VHDL warning at processador.vhd(26): object "flagUC" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 26
+Warning (10036): Verilog HDL or VHDL warning at processador.vhd(27): object "selMuxProxPC_flag" assigned a value but never read File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 27
+Warning (10541): VHDL Signal Declaration warning at processador.vhd(28): used implicit default value for signal "operacao" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at processador.vhd(29): used implicit default value for signal "saidaFlipFlop" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 29
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:processador|memoriaROM:ROM" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 59
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:processador|registradorGenerico:PC" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 69
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:processador|somaConstante:incremento1" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 81
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:MUX_PC" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 90
+Info (12128): Elaborating entity "bancoRegistradoresArqRegMem" for hierarchy "processador:processador|bancoRegistradoresArqRegMem:bancoRegistrador" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 107
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:muxULA" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 119
+Info (12128): Elaborating entity "ULA" for hierarchy "processador:processador|ULA:ULA" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 130
+Info (12128): Elaborating entity "flipflopGenerico" for hierarchy "processador:processador|flipflopGenerico:flipFLop" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 142
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "processador:processador|UnidadeControle:unidadeControle" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd Line: 151
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:interfaceSW" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 65
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:regDSP" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 75
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DSP0" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 86
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificadorRelogio" File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 175
+Warning (10620): VHDL warning at decodificador.vhd(48): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 48
+Warning (10620): VHDL warning at decodificador.vhd(49): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 49
+Warning (10620): VHDL warning at decodificador.vhd(52): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 52
+Warning (10620): VHDL warning at decodificador.vhd(53): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 53
+Warning (10620): VHDL warning at decodificador.vhd(54): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 54
+Warning (10620): VHDL warning at decodificador.vhd(55): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 55
+Warning (10620): VHDL warning at decodificador.vhd(56): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 56
+Warning (10620): VHDL warning at decodificador.vhd(57): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 57
+Warning (10620): VHDL warning at decodificador.vhd(59): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 59
+Warning (10620): VHDL warning at decodificador.vhd(60): comparison between unequal length operands always returns FALSE File: C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 60
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Fri Oct 16 19:41:39 2020
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:36
 
 
