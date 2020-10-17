@@ -9,7 +9,7 @@ entity decodificador is
     );
   port   (
     -- Input ports
-    endereco 	 		 :  in  std_logic_vector(7 downto 0);
+    endereco 	 		 :  in  std_logic_vector(9 downto 0);
 	 load					 :  in  std_logic;
 	 store				 :  in  std_logic;
 

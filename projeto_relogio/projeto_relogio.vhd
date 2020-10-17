@@ -12,7 +12,7 @@ entity projeto_relogio is
     CLOCK_50	: in std_logic;
 	
 	 SW	: in std_logic_vector(7 DOWNTO 0);
-	 KEY	: in std_logic_vector(4 DOWNTO 0);
+	 KEY	: in std_logic_vector(3 DOWNTO 0);
 	
 		
 	 HEX5, HEX4, HEX3, HEX2, HEX1, HEX0	: 	out std_logic_vector(6 DOWNTO 0)
@@ -42,7 +42,7 @@ architecture arch_name of projeto_relogio is
 	signal processador_out_hex : std_logic_vector(7 DOWNTO 0);
   signal signalDecode7Seg0 : std_logic_vector(3 DOWNTO 0);
   
-  signal processador_in_end : std_logic_vector(9 DOWNTO 0);
+  signal barramento_end : std_logic_vector(9 DOWNTO 0);
 
   signal load, store			 : std_logic;
 
@@ -54,7 +54,7 @@ begin
 			 -- Entradas (placa)
 				BarramentoDados      => processador_in,
 				clk 				      => CLOCK_50,
-				barramentoEnd 	      => processador_in_end,
+				barramentoEnd 	      => barramento_end,
 				--barramentoSaidaDados => x"0000" & processador_out_hex,
 				barramentoSaidaDados => processador_out_hex,
 				loadSaida 		      => load,
@@ -67,6 +67,23 @@ begin
 			   entrada  => SW, -- (7 downto 0) (bota ou nao)
 			   habilita => habilitaChave,
 			   saida    => processador_in	
+			);
+			
+	interfaceKEY : entity work.interfaceBotao
+			port map(
+			  entrada  => KEY,
+			  habilita => habilitaBotao,
+	        saida    => processador_in 
+			
+			);
+			
+	baseDeTempo : entity work.divisorGenerico_e_Interface
+			port map(
+				clk   => CLOCK_50,
+				habilitaLeitura => habilitaBtempo_Hab,
+				limpaLeitura => habilitaBtempo_Limpa,
+				leituraUmSegundo => processador_in
+			
 			);
   
  
@@ -89,7 +106,9 @@ begin
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX0
+			  saida7seg => HEX0,
+			  clk 		=> CLOCK_50,
+			  habilita  => habilitaDisp_u_s
 			);
 			
 	---------------------- DISP 1 ----------------------
@@ -104,7 +123,9 @@ begin
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX1
+			  saida7seg => HEX1,
+			  clk 		=> CLOCK_50,
+			  habilita  => habilitaDisp_d_s
 			);
 			
 	---------------------- DISP 2 ----------------------
@@ -119,7 +140,9 @@ begin
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX2
+			  saida7seg => HEX2,
+			  clk 		=> CLOCK_50,
+			  habilita  => habilitaDisp_u_m
 			);
 			
 	
@@ -135,8 +158,10 @@ begin
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX3
-			);
+			  saida7seg => HEX3,
+			  clk 		=> CLOCK_50,
+			  habilita  => habilitaDisp_d_m
+			  );
 		
 	---------------------- DISP 4 ----------------------
    ------------------ unidade hora ------------------
@@ -149,7 +174,9 @@ begin
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX4
+			  saida7seg => HEX4,
+			  clk 		=> CLOCK_50,
+			  habilita  => habilitaDisp_u_h
 			);	
 			
 	---------------------- DISP 5 ----------------------
@@ -161,11 +188,12 @@ begin
    DSP5 : entity work.conversorHex7Seg
 		  port map(
 			  dadoHex   => signalDecode7Seg0,
+			  clk 		=> CLOCK_50,
 			  apaga     => '0',
 			  negativo  => '0',
 			  overFlow  => '0',
-			  saida7seg => HEX5
-			);
+			  saida7seg => HEX5,
+			  habilita  => habilitaDisp_d_h			);
 	
 	
 	
@@ -177,7 +205,7 @@ begin
 					larguraDados => 8
 											)
 			port map(
-				endereco  => processador_out_hex,
+				endereco  => barramento_end,
 				load		 => store,
 				store	  	 => load,
 					 

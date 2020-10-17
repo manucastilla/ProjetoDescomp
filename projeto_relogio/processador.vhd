@@ -23,7 +23,7 @@ end entity;
 architecture arch_name of processador is
 
 	signal PC_ROM, Incr_MUX_ProxPC, Inc_PC   : std_logic_vector (enderecoWidth-1 DOWNTO 0);
-	signal flagZero, flagUC                          : std_logic;
+	signal flagZero                          : std_logic;
 	signal selMuxProxPC_flag					  : std_logic;
 	signal operacao                          : std_logic_vector(2 DOWNTO 0); -- 4 bits para as operacoes
 	signal saidaFlipFlop							  : std_logic;
@@ -94,7 +94,7 @@ architecture arch_name of processador is
             port map (
 					entradaA_MUX => Incr_MUX_ProxPC, 
 					entradaB_MUX => imediatoEndereco, 
-					seletor_MUX => selMuxPC, 
+					seletor_MUX => selMuxProxPC_flag, 
 					saida_MUX => Inc_PC
 				);
 
@@ -143,7 +143,7 @@ architecture arch_name of processador is
 				 port map (
 						CLK => clk, 
 						DIN => flagZero, 
-						DOUT => flagUC, 
+						DOUT => saidaFlipFlop, 
 						ENABLE => habFlipflop, 
 						RST => '0'
 				);
