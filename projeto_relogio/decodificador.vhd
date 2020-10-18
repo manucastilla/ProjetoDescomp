@@ -30,17 +30,16 @@ entity decodificador is
 	 selecionaBTempo_Limpa	:	out  std_logic
   );
 end entity;
-				-- arrumar isso
-					-- botoes  : x00 ~03
-					-- chave   : x04 ~ X0D (13)
-					-- display : x0E ~ X14
-					-- btempoE :   x15
-					-- btempoL : x16
+			
+					-- chave   : x00 ~ x07
+					-- botao   : x08 ~ X0F 
+					-- display : x10 ~ X42
+					-- btempoE : x4C ~ x55
+					-- btempoL : x56 ~ x5F
 
 
 architecture arch_name of decodificador is
-	--ALIAS               : std_logic IS memoria(9); -- mas usa para memoria
-	--signal memoria : std_logic_vector(9 DOWNTO 0);
+
 
 
 begin
@@ -48,7 +47,6 @@ begin
 	selecionaChave <= '1' WHEN (endereco = (b"00" & x"00") AND load = '1') ELSE '0';
 	selecionaBotao  <= '1' WHEN (endereco = (b"00" & x"08") AND load = '1') ELSE '0';
 	
-	--pular um pouco da memoria
 	selecionaDisp_u_h  <= '1' WHEN (endereco = (b"00" & x"10") AND store = '1') ELSE '0'; --16
 	selecionaDisp_d_h  <= '1' WHEN (endereco = (b"00" & x"1A") AND store = '1') ELSE '0'; -- 26
 	selecionaDisp_u_m  <= '1' WHEN (endereco = (b"00" & x"24") AND store = '1') ELSE '0'; -- 36
@@ -56,8 +54,8 @@ begin
 	selecionaDisp_u_s  <= '1' WHEN (endereco = (b"00" & x"38") AND store = '1') ELSE '0'; -- 56
 	selecionaDisp_d_s  <= '1' WHEN (endereco = (b"00" & x"42") AND store = '1') ELSE '0'; -- 66
 	
-	selecionaBTempo_Hab <= '1' WHEN (endereco = ( b"00" & x"4C") AND load = '1') ELSE '0';
-	selecionaBTempo_Limpa <= '1' WHEN (endereco = ( b"00" & x"4C") AND load = '1') ELSE '0';
+	selecionaBTempo_Hab <= '1' WHEN (endereco = ( b"00" & x"4C") AND load = '1') ELSE '0'; -- 76
+	selecionaBTempo_Limpa <= '1' WHEN (endereco = ( b"00" & x"56") AND load = '1') ELSE '0'; --86
 	
 
 end architecture;
