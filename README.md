@@ -16,5 +16,5 @@ O objetivo do projeto é a implementação de um processador, que será utilizad
 
 ### Diagrama:
 <p align="center">
-  <img src="Diagrama.pdf" width="1000" title="RTL viewer">
+  <img src="Diagrama.png" width="1000" title="RTL viewer">
 </p>
