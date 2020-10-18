@@ -25,7 +25,6 @@ architecture arch_name of processador is
 	signal PC_ROM, Incr_MUX_ProxPC, Inc_PC   : std_logic_vector (enderecoWidth-1 DOWNTO 0);
 	signal flagZero                          : std_logic;
 	signal selMuxProxPC_flag					  : std_logic;
-	signal operacao                          : std_logic_vector(2 DOWNTO 0); -- 4 bits para as operacoes
 	signal saidaFlipFlop							  : std_logic;
 	signal Instrucao                         : std_logic_vector(dataROMWidth-1 DOWNTO 0);
 	signal ULAentradaA, ULAentradaB, saidaULA: std_logic_vector(dadosWidth-1 DOWNTO 0);
@@ -136,7 +135,7 @@ architecture arch_name of processador is
 				entradaA => ULAentradaA, 
 				entradaB =>  ULAentradaB, 
 				saida => saidaULA, 
-				seletor => operacao, 
+				seletor => selOperacao, 
 				flagZero => flagZero);
 	
 	flipFLop: entity work.flipflopGenerico
@@ -154,7 +153,8 @@ architecture arch_name of processador is
 					opcode =>  opcode, 
 					palavraControle => palavraControle
 			);
-	
+			
+	barramentoEnd <= imediatoEndereco;
 	barramentoSaidaDados <= UlaentradaA;
 	loadSaida <= load;
 	storeSaida <= store;

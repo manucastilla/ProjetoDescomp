@@ -1,40 +1,31 @@
-Quartus Prime Archive log --	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qarlog
+Quartus Prime Archive log --	C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qarlog
 
-Archive:	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
-Date:		Thu Oct 15 16:26:52 2020
-Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Archive:	C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
+Date:		Sun Oct 18 16:43:30 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/ULA.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/UnidadeControle.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/bancoRegistradoresArqRegMem.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/flipflopGenerico.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/memoriaROM.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/muxGenerico2x1.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.done
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.flow.rpt
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.map.rpt
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/output_files/projeto_relogio.map.summary
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/processador.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qpf
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qsf
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd
-C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/somaConstante.vhd
-c:/intelfpga_lite/17.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 17 files to archive =======
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/ULA.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/UnidadeControle.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/bancoRegistradoresArqRegMem.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/conversorHex7Seg.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/decodificador.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/divisorGenerico.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/divisorGenerico_e_Interface.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/flipflopGenerico.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/interfaceBotao.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/interfaceDISPLAY.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/memoriaROM.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/muxGenerico2x1.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/processador.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qpf
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qsf
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio_assignment_defaults.qdf
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/somaConstante.vhd
+	======= Total: 20 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
-
-
-******* Archived project restoration attempt on Sat Oct 17 12:47:52 2020
-Source archive file:	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
-Archive was extracted into	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio_restored/
-		 - successfully.
-
-
-******* Archived project restoration attempt on Sat Oct 17 12:49:47 2020
-Source archive file:	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
-Archive was extracted into	C:/intelFPGA_lite/17.1/ProjetoDescomp/projeto_relogio/projeto_relogio_restored/
-		 - successfully.

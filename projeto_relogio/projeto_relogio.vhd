@@ -64,14 +64,14 @@ begin
   
    interfaceSW : entity work.interfaceCHAVES
 			port map(
-			   entrada  => SW, -- (7 downto 0) (bota ou nao)
+			   entrada  => SW(7 downto 0), -- (7 downto 0) (bota ou nao)
 			   habilita => habilitaChave,
 			   saida    => processador_in	
 			);
 			
 	interfaceKEY : entity work.interfaceBotao
 			port map(
-			  entrada  => KEY,
+			  entrada  => KEY(3 downto 0),
 			  habilita => habilitaBotao,
 	        saida    => processador_in 
 			
