@@ -1,4 +1,4 @@
-#Projeto 1 - Design de Computadores:
+# Projeto 1 - Design de Computadores
 ## Manuela Castilla, Thiago Verardo e Vitor Calcete.
 
 O objetivo do projeto é a implementação de um processador, que será utilizado em uma relógio com as seguintes características (projeto mínimo):
