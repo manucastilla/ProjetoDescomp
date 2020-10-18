@@ -6,23 +6,43 @@ entity divisorGenerico_e_Interface is
    port(clk      :   in std_logic;
       habilitaLeitura : in std_logic;
       limpaLeitura : in std_logic;
+        seletorBaseTempo : in std_logic;
       leituraUmSegundo :   out std_logic_veCtor(7 DOWNTO 0)
    );
 end entity;
 
 architecture interface of divisorGenerico_e_Interface is
-  signal sinalUmSegundo : std_logic;
-  signal saidaclk_reg1seg : std_logic;
+  signal sinalUmSegundo          : std_logic;
+  signal saidaclk_reg1seg   : std_logic;
+  signal saidaclk_rapido    : std_logic;
+  signal baseTempoEscolhido  : std_logic;
+ 
+
 begin
 
 baseTempo: entity work.divisorGenerico
-           generic map (divisor => 5)   -- divide por 10.
-           port map (clk => clk, saida_clk => saidaclk_reg1seg);
+           generic map (divisor => 25000000)   -- 1 segundo
+           port map (clk       => clk, 
+                            saida_clk => saidaclk_reg1seg);
+									
+
+baseTempoRapida: entity work.divisorGenerico
+           generic map (divisor => 2500)   -- 1 segundo
+           port map (clk       => clk, 
+                            saida_clk => saidaclk_rapido);
+
+muxBaseTempo: entity work.muxGenerico2x1_1bit
+        port map( entradaA_MUX => saidaclk_reg1seg,
+                 entradaB_MUX =>  saidaclk_rapido,
+                 seletor_MUX => seletorBaseTempo,
+                 saida_MUX => baseTempoEscolhido);
 
 registraUmSegundo: entity work.flipflopGenerico
-   port map (DIN => '1', DOUT => sinalUmSegundo,
-         ENABLE => '1', CLK => saidaclk_reg1seg,
-         RST => limpaLeitura);
+   port map (DIN      => '1',
+                 DOUT     => sinalUmSegundo,
+                 ENABLE  => '1', 
+                 CLK        => baseTempoEscolhido,
+             RST     => limpaLeitura);
 
 -- Faz o tristate de saida:
 leituraUmSegundo <= b"0000000" & sinalUmSegundo when habilitaLeitura = '1' else (others => 'Z');

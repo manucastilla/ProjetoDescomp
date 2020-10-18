@@ -22,7 +22,8 @@ ARCHITECTURE arch_name OF UnidadeControle IS
 	ALIAS load					 : std_logic IS palavraControle(1);
 	ALIAS store				    : std_logic IS palavraControle(0);
 
-   
+   -- definicoes dos opcodes
+	
 	 SIGNAL instrucao       : std_logic_vector(8	 DOWNTO 0);
     CONSTANT opCodeSub     : std_logic_vector(3 DOWNTO 0) := "0000";
 	 CONSTANT opCodeAdd     : std_logic_vector(3 DOWNTO 0) := "0001";
@@ -45,7 +46,8 @@ ARCHITECTURE arch_name OF UnidadeControle IS
     ALIAS display : std_logic IS instrucao(7);
 	 ALIAS doAnd   : std_logic IS instrucao(8);
     
-
+	 --  Tabela da sequencia de palavra de controle
+		
     --       selMuxProxPC selJe  selMuxRAM  habEscritaBancoReg  selOperacao  habFlipFlop  load  store
 	 -- sub			0	       0        1	  				 1              001           0        0      0
 	 -- add			0	       0        1	  				 1              000           0        0      0
@@ -74,6 +76,8 @@ BEGIN
 		  "100000000" WHEN opCodeAnd,
         "000000000" WHEN OTHERS;
 
+	-- Relacionando com a operacao da ULA
+		  
     WITH opCode SELECT
         selOperacao <= "000" WHEN opCodeJmp,
         "000" WHEN opCodeDisplay,
@@ -86,11 +90,10 @@ BEGIN
 		  "110" WHEN opcodeAnd,
         "000" WHEN OTHERS;
 
-
-    
+    -- Selecionando quais instrucoes vao estar relacionadas com os pontos de controle (Obeservar tabela)
     selMuxPC           <= jmp;
     selJe              <= je;
-    selMuxRAM          <= cmp OR add OR sub OR doAnd;
+    selMuxRAM          <= cmp OR add OR sub OR doAnd OR mov;
     habEscritaBancoReg <= add OR sub OR IO OR mov OR doAnd;
     habFlipFlop        <= cmp;
     load               <= IO;

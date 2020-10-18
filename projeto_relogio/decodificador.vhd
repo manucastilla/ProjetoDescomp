@@ -14,7 +14,6 @@ entity decodificador is
 	 store				 :  in  std_logic;
 
     -- Output ports
-    --selecionaBotao 			:  out  std_logic_vector(3 DOWNTO 0);
     selecionaBotao 		   :  out std_logic;
 	 selecionaChave 			:  out  std_logic;
 	 

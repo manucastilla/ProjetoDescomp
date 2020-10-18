@@ -81,19 +81,19 @@ class Line_Assemble:
         return output
         
     def get_i_instruction(self, instruct):
-        table = {'add': '0', 'sub': '1', 'and': '2', 'cmp': '3', 'mov': '4', 'getio': '5'}
+        table = {'add': '1', 'sub': '0', 'and': '8', 'cmp': '3', 'mov': '2', 'getio': '6'}
         r = bindigits(int(table[instruct]), 4)
         logging.debug('r funct: {}'.format(r))
         return r
 
     def get_j_instruction(self, instruct):
-        table = {'je': '6', 'jmp': '7'}
+        table = {'je': '5', 'jmp': '4'}
         r = bindigits(int(table[instruct]), 4)
         logging.debug('j instruct: {}'.format(r))
         return r
 
     def get_d_instruction(self, instruct):
-        table = {'display': '8'}
+        table = {'display': '7'}
         r = bindigits(int(table[instruct]), 4)
         logging.debug('d instruct: {}'.format(r))
         return r

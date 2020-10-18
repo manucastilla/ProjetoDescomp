@@ -1,0 +1,4 @@
+MAIN:
+	mov %regchave1, $9
+    display %regchave1, $56
+	jmp MAIN

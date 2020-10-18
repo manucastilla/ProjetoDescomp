@@ -31,13 +31,11 @@ architecture arch_name of processador is
 	
 	signal palavraControle : std_logic_vector(9 DOWNTO 0);
 	
-	
+	-- Formato da instrucao
 	alias opcode 							 : std_logic_vector is Instrucao(18 DOWNTO 15);
-	
-	
-	alias imediatoDado                : std_logic_vector (dadosWidth-1 DOWNTO 0) is Instrucao(dadosWidth-1 downto 0);
-	alias imediatoEndereco            : std_logic_vector (9 DOWNTO 0) is Instrucao(9 downto 0);
 	alias enderecoRegistrador         : std_logic_vector (4 DOWNTO 0) is Instrucao(14 DOWNTO 10);
+	alias imediatoEndereco            : std_logic_vector (9 DOWNTO 0) is Instrucao(9 downto 0);
+	alias imediatoDado                : std_logic_vector (dadosWidth-1 DOWNTO 0) is Instrucao(dadosWidth-1 downto 0);
 	
 	ALIAS selJe              : std_logic IS palavraControle(9);
    ALIAS selMuxPC           : std_logic IS palavraControle(8);
@@ -51,10 +49,7 @@ architecture arch_name of processador is
 
  begin
 
-  -- Para instanciar, a atribuição de sinais (e generics) segue a ordem: (nomeSinalArquivoDefinicaoComponente => nomeSinalNesteArquivo)
-  -- regA:  entity work.nome_do_componente generic map (DATA_WIDTH => DATA_WIDTH)
-  --        port map (dataIN => dataIN, dataOUT =>  RegAmuxA, enable =>  habRegA, clk =>  clk, rst => rst);
-
+  
 	ROM: entity work.memoriaROM 
 		  generic map (
 				dataWidth => dataROMWidth
@@ -101,7 +96,6 @@ architecture arch_name of processador is
 	selMuxProxPC_flag <= selMuxPC OR (selJe AND saidaFlipFlop);
 
 	
-	-------------------- opcode ------------------
 	
 	bancoRegistrador : entity work.bancoRegistradoresArqRegMem   
 							 generic map (
@@ -120,7 +114,7 @@ architecture arch_name of processador is
 						larguraDados => 8
 					)
            port map (
-					entradaA_MUX => barramentoDados, 
+					entradaA_MUX => BarramentoDados, 
 					entradaB_MUX => imediatoDado, 
 					seletor_MUX => selMuxRAM, 
 					saida_MUX => ULAentradaB
@@ -137,6 +131,8 @@ architecture arch_name of processador is
 				saida => saidaULA, 
 				seletor => selOperacao, 
 				flagZero => flagZero);
+	
+	-- Nosso flag seria o flipflop  
 	
 	flipFLop: entity work.flipflopGenerico
 				 port map (
@@ -155,7 +151,7 @@ architecture arch_name of processador is
 			);
 			
 	barramentoEnd <= imediatoEndereco;
-	barramentoSaidaDados <= UlaentradaA;
+	barramentoSaidaDados <= ULAentradaA;
 	loadSaida <= load;
 	storeSaida <= store;
 
