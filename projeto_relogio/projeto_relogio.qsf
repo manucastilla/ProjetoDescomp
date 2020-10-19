@@ -169,6 +169,24 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX5[6]
 
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX0
+set_instance_assignment -name SLEW_RATE 1 -to HEX0
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX1
+set_instance_assignment -name SLEW_RATE 1 -to HEX1
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX2
+set_instance_assignment -name SLEW_RATE 1 -to HEX2
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX3
+set_instance_assignment -name SLEW_RATE 1 -to HEX3
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX4
+set_instance_assignment -name SLEW_RATE 1 -to HEX4
+
+set_instance_assignment -name CURRENT_STRENGTH_NEW DEFAULT -to HEX5
+set_instance_assignment -name SLEW_RATE 1 -to HEX5
+
 #============================================================
 # KEY
 #============================================================

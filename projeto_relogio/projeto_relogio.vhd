@@ -85,16 +85,16 @@ begin
 			
 			);
   
-	regDSP : entity work.registradorGenerico
-			generic map(larguraDados => 4)
-			port map(
-			   DIN    => processador_out_hex(3 DOWNTO 0),
-			   DOUT   => signalDecode7Seg0,
-			   ENABLE => '1',
-				CLK    => CLOCK_50,
-				RST    => '0'
-			);
- 
+--	regDSP : entity work.registradorGenerico
+--			generic map(larguraDados => 4)
+--			port map(
+--			   DIN    => processador_out_hex(3 DOWNTO 0),
+--			   DOUT   => signalDecode7Seg0,
+--			   ENABLE => '1',
+--				CLK    => CLOCK_50,
+--				RST    => '0'
+--			);
+ signalDecode7Seg0 <= processador_out_hex(3 DOWNTO 0);
   ---------------------- DISP 0 ----------------------
   ---------------- unidade segundo -------------------
 			
@@ -204,8 +204,8 @@ begin
 											)
 			port map(
 				endereco  => barramento_end,
-				load		 => store,
-				store	  	 => load,
+				load		 => load,
+				store	  	 => store,
 					 
 				selecionaBotao		 => habilitaBotao,
 				selecionaChave		 => habilitaChave,
