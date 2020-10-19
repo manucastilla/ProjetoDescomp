@@ -30,7 +30,7 @@ Dois switches tem funções:
 
 <ul>
   <li>SW 0: Se 1, ao clicar nos botões configura a hora, minuto e segundo.</li>
-  <li>SW 1: Se 0 = usa a base de tempo de 1 segundo; Se 1 = usa A base de tempo mais rápida;</li>
+  <li>SW 1: Se 0, usa a base de tempo de 1 segundo; Se 1, usa a base de tempo mais rápida;</li>
 </ul>
 
 #### Botões:
@@ -38,8 +38,8 @@ Dois switches tem funções:
 Quando o SW 0 está ligado:
 
 <ul>
-  <li>But 0: incrementa dezena dos segundos;</li>
-  <li>But 1: incrementa unidade dos minutos;</li>
-  <li>But 2: incrementa dezena dos minutos;</li>
-  <li>But 3: incrementa unidade das horas;</li>
+  <li>But 0: incrementa unidade dos minutos;</li>
+  <li>But 1: incrementa dezena dos minutos;</li>
+  <li>But 2: incrementa unidade das horas;</li>
+  <li>But 3: incrementa dezena das horas;</li>
 </ul>
