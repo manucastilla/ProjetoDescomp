@@ -22,12 +22,12 @@ VERIFICACHAVES:
 	je CONFIGURARELOGIO
 
 LEBASETEMPO:
-    getio %tempo, $20 #Pegar se passou 1 seg
+    getio %tempo, $76 #Pegar se passou 1 seg
     cmp %tempo, $0
     je MAIN
 
 UNISEG:
-    getio %tempo, $21 #Resetar
+    getio %tempo, $86 #Resetar
 	cmp %UnidadeSeg, $9
 	je DEZSEG
 	add %UnidadeSeg, $1
@@ -89,26 +89,54 @@ CONFIGURARELOGIO:
 
 LERBUT0:
     getio %but0, $8
+	and %but0, $1
     cmp %but0, $0
 	je BUT0APERTADO
-	jmp LEBASETEMPO
+
+LERBUT1:
+    getio %but1, $8
+	and %but1, $2
+    cmp %but1, $0
+	je BUT1APERTADO
+
+LERBUT2:
+    getio %but2, $8
+	and %but2, $3
+    cmp %but2, $0
+	je BUT2APERTADO
+
+LERBUT3:
+    getio %but3, $8
+	and %but3, $4
+    cmp %but3, $0
+	je BUT3APERTADO
+
+jmp MAIN
 
 BUT0APERTADO:
 	getio %but0, $8
 	and %but0, $1
     cmp %but0, $1
-	je SOLTOUB0
-	getio %tempo, $20 #Pegar se passou 1 seg
-    cmp %tempo, $0
-	je SOLTOUB0
+	je UNIMIN
 	jmp BUT0APERTADO
 
-SOLTOUB0:
-	cmp %UnidadeMin, $9
-	je ZERAUNIMIN
-	add %UnidadeMin, $1
-	jmp MAIN
+BUT1APERTADO:
+	getio %but1, $8
+	and %but1, $2
+    cmp %but1, $1
+	je DEZMIN
+	jmp BUT1APERTADO
 
-ZERAUNIMIN:
-	mov %UnidadeMin, $0
-	jmp MAIN
+BUT2APERTADO:
+	getio %but2, $8
+	and %but2, $3
+    cmp %but2, $1
+	je UNIHORA
+	jmp BUT2APERTADO
+
+BUT3APERTADO:
+	getio %but3, $8
+	and %but3, $4
+    cmp %but3, $1
+	je DEZHORA
+	jmp BUT3APERTADO
