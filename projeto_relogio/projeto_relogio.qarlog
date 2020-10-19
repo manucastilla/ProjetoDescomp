@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qarlog
 
 Archive:	C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qar
-Date:		Sun Oct 18 19:33:34 2020
+Date:		Sun Oct 18 23:49:46 2020
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -22,11 +22,12 @@ C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/muxGener
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/processador.vhd
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qpf
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.qsf
+C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.sdc
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio_assignment_defaults.qdf
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/registradorGenerico.vhd
 C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/somaConstante.vhd
-	======= Total: 21 files to archive =======
+	======= Total: 22 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
