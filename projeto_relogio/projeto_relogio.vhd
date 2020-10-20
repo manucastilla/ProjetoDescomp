@@ -27,7 +27,7 @@ architecture arch_name of projeto_relogio is
   signal habilitaBtempo_Limpa : std_logic;
   signal habilitaBtempo_Hab   : std_logic;
   signal habilita             : std_logic;
-  signal habilitaBotao        : std_logic;
+  signal habilitaBotao        : std_logic_vector(3 DOWNTO 0);
   signal dadoHex				   : std_logic_vector(3 DOWNTO 0);
   
   signal habilitaDisp_u_h  	:   std_logic;  -- Habilitar display da unidade hora
