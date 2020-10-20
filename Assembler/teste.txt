@@ -58,14 +58,13 @@ UNIHORA:
 	mov %DezenaMin, $0
 	cmp %UnidadeHora, $9
 	je DEZHORA
-    cmp %UnidadeHora, $4
+    cmp %UnidadeHora, $3
     je VERIFICAACABOU
 	add %UnidadeHora, $1
 	jmp MAIN
 	
 DEZHORA:	
     mov %UnidadeHora, $0
-    cmp %DezenaHora, $2
     add %DezenaHora, $1
     jmp MAIN
 
@@ -89,25 +88,21 @@ CONFIGURARELOGIO:
 
 LERBUT0:
     getio %but0, $8
-	and %but0, $1
     cmp %but0, $0
 	je BUT0APERTADO
 
 LERBUT1:
-    getio %but1, $8
-	and %but1, $2
+    getio %but1, $9
     cmp %but1, $0
 	je BUT1APERTADO
 
 LERBUT2:
-    getio %but2, $8
-	and %but2, $3
+    getio %but2, $10
     cmp %but2, $0
 	je BUT2APERTADO
 
 LERBUT3:
-    getio %but3, $8
-	and %but3, $4
+    getio %but3, $11
     cmp %but3, $0
 	je BUT3APERTADO
 
@@ -115,28 +110,90 @@ jmp MAIN
 
 BUT0APERTADO:
 	getio %but0, $8
-	and %but0, $1
     cmp %but0, $1
-	je UNIMIN
+	je INCUNIMIN
 	jmp BUT0APERTADO
 
 BUT1APERTADO:
-	getio %but1, $8
-	and %but1, $2
+	getio %but1, $9
     cmp %but1, $1
-	je DEZMIN
+	je INCDEZMIN
 	jmp BUT1APERTADO
 
 BUT2APERTADO:
-	getio %but2, $8
-	and %but2, $3
+	getio %but2, $10
     cmp %but2, $1
-	je UNIHORA
+	je INCUNIHORA
 	jmp BUT2APERTADO
 
 BUT3APERTADO:
-	getio %but3, $8
-	and %but3, $4
+	getio %but3, $11
     cmp %but3, $1
-	je DEZHORA
+	je INCDEZHORA
 	jmp BUT3APERTADO
+
+INCUNIMIN:
+	cmp %UnidadeMin, $9
+    je ZERAUNIMIN
+	add %UnidadeMin, $1
+	jmp MAIN
+
+ZERAUNIMIN:
+	mov %UnidadeMin, $0
+	jmp MAIN
+
+INCDEZMIN:
+	cmp %DezenaMin, $5
+	je ZERADEZMIN
+	add %DezenaMin, $1
+	jmp MAIN
+
+ZERADEZMIN:
+	mov %DezenaMin, $0
+	jmp MAIN
+
+INCUNIHORA:
+	cmp %UnidadeHora, $9
+	je ZERAUNIHORA
+    cmp %UnidadeHora, $3
+    je CHECADEZHORA
+	add %UnidadeHora, $1
+	jmp MAIN
+
+ZERAUNIHORA:
+	mov %UnidadeHora, $0
+	jmp MAIN
+
+CHECADEZHORA:
+	cmp %DezenaHora, $2
+	je ZERAUNIHORA
+	add %UnidadeHora, $1
+	jmp MAIN
+
+INCDEZHORA:
+	cmp % DezenaHora, $1
+	je CHECAUNIHORA
+	cmp %DezenaHora, $2
+	je ZERAINCDEZHORA
+	add %DezenaHora, $1
+	jmp MAIN
+
+CHECAUNIHORA:
+	cmp %UnidadeHora, $4
+	je ZERAUNIHORA
+	cmp %UnidadeHora, $5
+	je ZERAUNIHORA
+	cmp %UnidadeHora, $6
+	je ZERAUNIHORA
+	cmp %UnidadeHora, $7
+	je ZERAUNIHORA
+	cmp %UnidadeHora, $8
+	je ZERAUNIHORA
+	cmp %UnidadeHora, $9
+	je ZERAUNIHORA
+	add %DezenaHora, $1
+	jmp MAIN
+
+ZERAINCDEZHORA:
+	mov %DezenaHora, $0
+	jmp MAIN

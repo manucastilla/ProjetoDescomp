@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projeto_relogio
-Sun Oct 18 23:42:38 2020
+Tue Oct 20 20:41:39 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 18 23:42:38 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 20 20:41:39 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; projeto_relogio                             ;
 ; Top-level Entity Name           ; projeto_relogio                             ;
@@ -189,7 +189,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -224,14 +224,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 255            ;
+; Estimate of Logic utilization (ALMs needed) ; 293            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 294            ;
-;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 89             ;
-;     -- 5 input functions                    ; 54             ;
-;     -- 4 input functions                    ; 77             ;
-;     -- <=3 input functions                  ; 71             ;
+; Combinational ALUT usage for logic          ; 329            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 133            ;
+;     -- 5 input functions                    ; 45             ;
+;     -- 4 input functions                    ; 84             ;
+;     -- <=3 input functions                  ; 67             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 203            ;
 ;                                             ;                ;
@@ -241,8 +241,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 202            ;
-; Total fan-out                               ; 2258           ;
-; Average fan-out                             ; 3.72           ;
+; Total fan-out                               ; 2473           ;
+; Average fan-out                             ; 3.85           ;
 +---------------------------------------------+----------------+
 
 
@@ -251,26 +251,27 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Entity Name                 ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+-----------------------------+--------------+
-; |projeto_relogio                                     ; 294 (8)             ; 203 (0)                   ; 0                 ; 0          ; 55   ; 0            ; |projeto_relogio                                                                            ; projeto_relogio             ; work         ;
+; |projeto_relogio                                     ; 329 (11)            ; 203 (0)                   ; 0                 ; 0          ; 55   ; 0            ; |projeto_relogio                                                                            ; projeto_relogio             ; work         ;
 ;    |conversorHex7Seg:DSP0|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP0                                                      ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DSP1|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP1                                                      ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DSP2|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP2                                                      ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DSP3|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP3                                                      ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DSP4|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP4                                                      ; conversorHex7Seg            ; work         ;
 ;    |conversorHex7Seg:DSP5|                           ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|conversorHex7Seg:DSP5                                                      ; conversorHex7Seg            ; work         ;
-;    |decodificador:decodificadorRelogio|              ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|decodificador:decodificadorRelogio                                         ; decodificador               ; work         ;
-;    |divisorGenerico_e_Interface:baseDeTempo|         ; 48 (0)              ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo                                    ; divisorGenerico_e_Interface ; work         ;
+;    |decodificador:decodificadorRelogio|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|decodificador:decodificadorRelogio                                         ; decodificador               ; work         ;
+;    |divisorGenerico_e_Interface:baseDeTempo|         ; 50 (0)              ; 40 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo                                    ; divisorGenerico_e_Interface ; work         ;
 ;       |divisorGenerico:baseTempoRapida|              ; 16 (16)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo|divisorGenerico:baseTempoRapida    ; divisorGenerico             ; work         ;
-;       |divisorGenerico:baseTempo|                    ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo|divisorGenerico:baseTempo          ; divisorGenerico             ; work         ;
+;       |divisorGenerico:baseTempo|                    ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo|divisorGenerico:baseTempo          ; divisorGenerico             ; work         ;
 ;       |flipflopGenerico:registraUmSegundo|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo|flipflopGenerico:registraUmSegundo ; flipflopGenerico            ; work         ;
 ;       |muxGenerico2x1_1bit:muxBaseTempo|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|divisorGenerico_e_Interface:baseDeTempo|muxGenerico2x1_1bit:muxBaseTempo   ; muxGenerico2x1_1bit         ; work         ;
-;    |processador:processador|                         ; 180 (1)             ; 139 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador                                                    ; processador                 ; work         ;
-;       |ULA:ULA|                                      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|ULA:ULA                                            ; ULA                         ; work         ;
-;       |UnidadeControle:unidadeControle|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|UnidadeControle:unidadeControle                    ; UnidadeControle             ; work         ;
-;       |bancoRegistradoresArqRegMem:bancoRegistrador| ; 57 (57)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|bancoRegistradoresArqRegMem:bancoRegistrador       ; bancoRegistradoresArqRegMem ; work         ;
+;    |processador:processador|                         ; 206 (1)             ; 139 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador                                                    ; processador                 ; work         ;
+;       |ULA:ULA|                                      ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|ULA:ULA                                            ; ULA                         ; work         ;
+;       |UnidadeControle:unidadeControle|              ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|UnidadeControle:unidadeControle                    ; UnidadeControle             ; work         ;
+;       |bancoRegistradoresArqRegMem:bancoRegistrador| ; 58 (58)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|bancoRegistradoresArqRegMem:bancoRegistrador       ; bancoRegistradoresArqRegMem ; work         ;
 ;       |flipflopGenerico:flipFLop|                    ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|flipflopGenerico:flipFLop                          ; flipflopGenerico            ; work         ;
-;       |memoriaROM:ROM|                               ; 62 (62)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|memoriaROM:ROM                                     ; memoriaROM                  ; work         ;
-;       |muxGenerico2x1:muxULA|                        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|muxGenerico2x1:muxULA                              ; muxGenerico2x1              ; work         ;
+;       |memoriaROM:ROM|                               ; 83 (83)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|memoriaROM:ROM                                     ; memoriaROM                  ; work         ;
+;       |muxGenerico2x1:MUX_PC|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|muxGenerico2x1:MUX_PC                              ; muxGenerico2x1              ; work         ;
+;       |muxGenerico2x1:muxULA|                        ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|muxGenerico2x1:muxULA                              ; muxGenerico2x1              ; work         ;
 ;       |registradorGenerico:PC|                       ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|registradorGenerico:PC                             ; registradorGenerico         ; work         ;
 ;       |somaConstante:incremento1|                    ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |projeto_relogio|processador:processador|somaConstante:incremento1                          ; somaConstante               ; work         ;
 +------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+-----------------------------+--------------+
@@ -284,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 203   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 138   ;
+; Number of registers using Synchronous Load   ; 136   ;
 ; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 152   ;
@@ -561,25 +562,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 24                          ;
 ;     ENA SLD           ; 128                         ;
 ;     SCLR              ; 37                          ;
-;     SLD               ; 10                          ;
-;     plain             ; 3                           ;
-; arriav_lcell_comb     ; 294                         ;
+;     SLD               ; 8                           ;
+;     plain             ; 5                           ;
+; arriav_lcell_comb     ; 329                         ;
 ;     arith             ; 56                          ;
 ;         1 data inputs ; 48                          ;
 ;         5 data inputs ; 8                           ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 235                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 77                          ;
-;         5 data inputs ; 46                          ;
-;         6 data inputs ; 89                          ;
+;     normal            ; 273                         ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 84                          ;
+;         5 data inputs ; 37                          ;
+;         6 data inputs ; 133                         ;
 ; boundary_port         ; 55                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.70                        ;
-; Average LUT depth     ; 4.88                        ;
+; Average LUT depth     ; 5.12                        ;
 +-----------------------+-----------------------------+
 
 
@@ -588,7 +586,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -598,7 +596,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Oct 18 23:42:19 2020
+    Info: Processing started: Tue Oct 20 20:41:23 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projeto_relogio -c projeto_relogio
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -636,7 +634,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file projeto
     Info (12022): Found design unit 1: projeto_relogio-arch_name File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 24
     Info (12023): Found entity 1: projeto_relogio File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/projeto_relogio.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
-    Info (12022): Found design unit 1: decodificador-arch_name File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 40
+    Info (12022): Found design unit 1: decodificador-arch_name File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 41
     Info (12023): Found entity 1: decodificador File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/decodificador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
     Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/vitor/OneDrive/햞ea de Trabalho/ProjetoDescomp/projeto_relogio/interfaceCHAVES.vhd Line: 15
@@ -691,14 +689,14 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 502 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 537 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 447 logic cells
+    Info (21061): Implemented 482 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Sun Oct 18 23:42:38 2020
-    Info: Elapsed time: 00:00:19
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Tue Oct 20 20:41:39 2020
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:28
 
 

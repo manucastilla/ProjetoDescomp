@@ -14,7 +14,8 @@ entity decodificador is
 	 store				 :  in  std_logic;
 
     -- Output ports
-    selecionaBotao 		   :  out std_logic;
+    -- selecionaBotao 		   :  out std_logic;
+	 selecionaBotao 		   :  out std_logic_vector(3 downto 0);
 	 selecionaChave 			:  out  std_logic;
 	 
 	 selecionaDisp_u_h  			:  out  std_logic;
@@ -44,7 +45,13 @@ architecture arch_name of decodificador is
 begin
 
 	selecionaChave <= '1' WHEN (endereco = (b"00" & x"00") AND load = '1') ELSE '0';
-	selecionaBotao  <= '1' WHEN (endereco = (b"00" & x"08") AND load = '1') ELSE '0';
+	--selecionaBotao  <= '1' WHEN (endereco = (b"00" & x"08") AND load = '1') ELSE '0';
+	
+	selecionaBotao(0) <= '1' WHEN (endereco = (b"00" & x"08") AND load = '1') ELSE '0'; -- 8
+	selecionaBotao(1) <= '1' WHEN (endereco = (b"00" & x"09") AND load = '1') ELSE '0'; -- 9
+	selecionaBotao(2) <= '1' WHEN (endereco = (b"00" & x"0A") AND load = '1') ELSE '0'; -- 10
+	selecionaBotao(3) <= '1' WHEN (endereco = (b"00" & x"0B") AND load = '1') ELSE '0'; -- 11
+
 	
 	selecionaDisp_u_h  <= '1' WHEN (endereco = (b"00" & x"10") AND store = '1') ELSE '0'; --16
 	selecionaDisp_d_h  <= '1' WHEN (endereco = (b"00" & x"1A") AND store = '1') ELSE '0'; -- 26
