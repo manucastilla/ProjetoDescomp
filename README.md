@@ -23,6 +23,7 @@ O objetivo do projeto é a implementação de um processador, que será utilizad
   <img src = "entrega/Diagrama.png" width="1000" title="RTL viewer">
 </p>
 
+
 ### Funcionamento:
 
 #### Switches:
